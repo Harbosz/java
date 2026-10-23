@@ -10,7 +10,6 @@ public class Main {
     private static Scanner sc;
 
     public static void main(String[] args) {
-        // Коректне введення/виведення кирилиці в консолі
         System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out), true, StandardCharsets.UTF_8));
         sc = new Scanner(System.in, StandardCharsets.UTF_8);
 
@@ -58,7 +57,6 @@ public class Main {
         }
     }
 
-    /** Сортування методом простого вибору за роком народження (за зростанням). */
     static void selectionSortByBirthYear(Patient[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int minIdx = i;
@@ -75,7 +73,6 @@ public class Main {
         }
     }
 
-    /** Лінійний пошук за цілим об'єктом (через equals). Повертає індекс або -1. */
     static int linearSearch(Patient[] arr, Patient sample) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].equals(sample)) {
