@@ -1,14 +1,11 @@
 import java.util.Objects;
 
-/**
- * Пацієнт в електронному обліку медичного закладу.
- */
 public class Patient {
-    private String cardNumber;   // номер медичної картки
-    private String fullName;     // ПІБ
-    private int birthYear;       // рік народження
-    private double weight;       // вага, кг
-    private String diagnosis;    // поточний діагноз
+    private String cardNumber;   
+    private String fullName;   
+    private int birthYear;      
+    private double weight;       
+    private String diagnosis;   
 
     public Patient(String cardNumber, String fullName, int birthYear, double weight, String diagnosis) {
         this.cardNumber = cardNumber;
@@ -24,16 +21,11 @@ public class Patient {
     public double getWeight()     { return weight; }
     public String getDiagnosis()  { return diagnosis; }
 
-    /** Вік пацієнта відносно заданого року. */
     public int getAge(int currentYear) {
         return currentYear - birthYear;
     }
 
-    /**
-     * Пацієнти рівні, якщо збігаються номер картки, ПІБ і рік народження.
-     * Вага та діагноз не враховуються — вони змінюються з часом,
-     * а людина залишається тією самою.
-     */
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
