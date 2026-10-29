@@ -1,8 +1,5 @@
-/**
- * Рік народження пацієнта поза допустимим діапазоном.
- */
 public class InvalidBirthYearException extends PatientException {
-    private final int invalidYear;   // значення, яке спричинило виняток
+    private final int invalidYear;
     private final int minYear;
     private final int maxYear;
 
