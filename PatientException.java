@@ -1,9 +1,5 @@
-/**
- * Базовий (checked) виняток для порушень правил обліку пацієнтів.
- * Від нього успадковуються конкретніші доменні винятки.
- */
 public class PatientException extends Exception {
-    private final String fieldName;   // поле пацієнта, у якому знайдено помилку
+    private final String fieldName;
 
     public PatientException(String message, String fieldName) {
         super(message);

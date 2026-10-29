@@ -1,24 +1,19 @@
 import java.time.Year;
 import java.util.Objects;
 
-/**
- * Пацієнт в електронному обліку медичного закладу.
- * Конструктор перевіряє доменні правила і кидає власні винятки.
- */
 public class Patient {
     public static final int MIN_BIRTH_YEAR = 1900;
-    public static final double MIN_WEIGHT = 0.5;    // кг, новонароджений
-    public static final double MAX_WEIGHT = 400.0;  // кг
+    public static final double MIN_WEIGHT = 0.5;
+    public static final double MAX_WEIGHT = 400.0;
 
-    private final String cardNumber;   // номер медичної картки
-    private final String fullName;     // ПІБ
-    private final int birthYear;       // рік народження
-    private final double weight;       // вага, кг
-    private final String diagnosis;    // поточний діагноз
+    private final String cardNumber;
+    private final String fullName;
+    private final int birthYear;
+    private final double weight;
+    private final String diagnosis;
 
     public Patient(String cardNumber, String fullName, int birthYear, double weight, String diagnosis)
             throws PatientException {
-
         if (cardNumber == null || cardNumber.isBlank()) {
             throw new PatientException("Номер медичної картки не може бути порожнім", "cardNumber");
         }
